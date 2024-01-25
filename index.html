@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stepUpStyle</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <img src="./page logo.png" alt="">
+            <div class="menu">
+                <a href="">Home</a>
+                <a href="">Store</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+                <button>Sign In</button>
+            </div>
+            <div onclick=showMenu() class="icon"><i class="ri-menu-3-fill"></i></div>
+        </nav>
+
+        <div class="content">
+            <div class="intro">
+                <h1>Wellcome To The Pakistan Branded <span>stepUpStyle</span> Store.</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur ipsa sequi fugit perspiciatis
+                    adipisci magni rem nemo impedit, beatae fuga quisquam esse, sint vero pariatur.</p>
+                <button>Shop Now</button>
+            </div>
+            <div class="img">
+                <img src="./img.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Humburger Menu -->
+    <div class="humberger-menu">
+        <i onclick=hideMenu() class="ri-close-line"></i>
+        <div class="sideBar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li> <a href="#">Store</a></li>
+                <li> <a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Sign in</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <script>
+       function showMenu() {
+            const sidebar = document.querySelector(".humberger-menu");
+            const icon = document.querySelector('.icon')
+            sidebar.style.display= "flex"
+            icon.style.display = 'none'
+       }
+       function hideMenu() {
+            const cross = document.querySelector(".humberger-menu")
+            const icon = document.querySelector('.icon')
+            cross.style.display = "none"
+            icon.style.display = 'flex'
+       }
+    </script>
+
+</body>
+
+</html>
